@@ -62,21 +62,21 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 1rem;
+  --background: oklch(0.19 0.07 268);
+  --foreground: oklch(0.98 0.005 260);
+  --card: oklch(0.25 0.075 272);
+  --card-foreground: oklch(0.98 0.005 260);
+  --popover: oklch(0.22 0.07 270);
+  --popover-foreground: oklch(0.98 0.005 260);
+  --primary: oklch(0.62 0.23 300);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.3 0.08 272);
+  --secondary-foreground: oklch(0.98 0.005 260);
+  --muted: oklch(0.3 0.06 270);
+  --muted-foreground: oklch(0.78 0.03 270);
+  --accent: oklch(0.72 0.29 350);
+  --accent-foreground: oklch(0.15 0.05 270);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
@@ -141,4 +141,53 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+@theme inline {
+  --font-sans: "Outfit", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-neon: var(--accent);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@utility squad-gradient {
+  background-image: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--primary) 85%, transparent),
+    var(--accent)
+  );
+}
+
+@keyframes squad-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility reveal {
+  opacity: 0;
+  &[data-visible="true"] {
+    animation: squad-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+}
+
+@keyframes squad-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--tilt, 0deg));
+  }
+  50% {
+    transform: translateY(-10px) rotate(var(--tilt, 0deg));
+  }
+}
+
+@utility sticker {
+  animation: squad-float 4s ease-in-out infinite;
 }
