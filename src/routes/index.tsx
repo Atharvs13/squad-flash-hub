@@ -3,17 +3,17 @@ import { useEffect, useState } from "react";
 import { Instagram, MessageCircle, Send, Youtube, X, Play, ChevronLeft, ChevronRight } from "lucide-react";
 import classPhoto from "@/assets/class-photo.jpg.asset.json";
 import { Reveal } from "@/components/Reveal";
-
+import classBanner from "../assets/class-banner.jpeg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Our College Squad 🎓 | Class Page" },
+      { title: "Our CYBERWALEE | Class Page" },
       {
         name: "description",
         content:
-          "Photos, reels, memories and attendance struggles from our college class — one page for all the chaos.",
+          "Photos, reels, memories and attendance struggles from our CYBERWALEE class — one page for all the chaos.",
       },
-      { property: "og:title", content: "Our College Squad 🎓 | Class Page" },
+      { property: "og:title", content: "Our CYBERWALEE | Class Page" },
       {
         property: "og:description",
         content: "Assignments, memories, reels, chaos, and attendance struggles — all in one place.",
@@ -25,10 +25,7 @@ export const Route = createFileRoute("/")({
 
 // 🔧 Replace these links anytime
 const LINKS = {
-  instagram: "https://instagram.com/ourcollegepage",
-  whatsapp: "https://chat.whatsapp.com/",
-  telegram: "https://t.me/ourcollegepage",
-  youtube: "https://youtube.com/@ourcollegepage",
+  instagram: "https://instagram.com/cyberwalee",
 };
 
 // 🔧 Swap src with new asset URLs as you upload more photos
@@ -46,10 +43,10 @@ const PHOTOS = [
 ].map((caption, i) => ({ id: i, src: classPhoto.url, caption }));
 
 const REELS = [
-  { title: "Attendance 74.9% arc", views: "12.4K views", url: "https://instagram.com/reel1" },
-  { title: "Lab viva simulation", views: "8.1K views", url: "https://instagram.com/reel2" },
-  { title: "Last bench transition", views: "21.7K views", url: "https://instagram.com/reel3" },
-  { title: "Trip dump 2026", views: "5.3K views", url: "https://instagram.com/ourcollegepage" },
+  { title: "After Exam is Over", views: "12.4K views", url: "https://www.instagram.com/reel/Db5zthfNB_a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA==" },
+  { title: "Kass Niyogan", views: "8.1K views", url: "https://www.instagram.com/reel/DbwxcdQz6Ah/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA==" },
+  { title: "आमच  Department", views: "21.7K views", url: "https://www.instagram.com/reel/DVQ0YisDQ3G/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA==" },
+  { title: "Trip dump 2026", views: "5.3K views", url: "https://www.instagram.com/reel/DVVVqX2jWTE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA=="},
 ];
 
 const QUOTES = [
@@ -80,12 +77,12 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <section className="relative flex min-h-[92vh] items-center justify-center overflow-hidden">
-        <img
-          src={classPhoto.url}
-          alt="Our college class posing together on the rocks at sunset"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-background/80" />
+    <img
+  src={classBanner}
+  alt="Our college class posing together on the rocks at sunset"
+  className="absolute inset-0 h-full w-full object-cover"
+/>
+        <div className="absolute inset-0 bg-background/35" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
 
         <span className="sticker absolute left-[6%] top-[18%] hidden rotate-[-8deg] rounded-full border border-accent/60 bg-card/70 px-4 py-2 text-sm font-semibold backdrop-blur sm:block">
@@ -106,7 +103,7 @@ function Index() {
           </Reveal>
           <Reveal delay={100}>
             <h1 className="text-4xl font-extrabold leading-tight sm:text-6xl">
-              Welcome to Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">College Squad</span> 🎓
+              Welcome to Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">CYBERWALEE</span>
             </h1>
           </Reveal>
           <Reveal delay={200}>
@@ -148,7 +145,7 @@ function Index() {
           {[
             { k: "60+", v: "classmates" },
             { k: "∞", v: "group project excuses" },
-            { k: "74.9%", v: "average attendance" },
+            { k: "35.1%", v: "average attendance" },
           ].map((s, i) => (
             <Reveal key={s.v} delay={i * 120}>
               <div className="rounded-2xl border border-foreground/10 bg-card p-6 text-center transition-transform duration-200 hover:-translate-y-1 hover:border-accent/50">
@@ -236,9 +233,6 @@ function Index() {
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {[
               { icon: Instagram, label: "Instagram", url: LINKS.instagram },
-              { icon: MessageCircle, label: "WhatsApp Group", url: LINKS.whatsapp },
-              { icon: Send, label: "Telegram Channel", url: LINKS.telegram },
-              { icon: Youtube, label: "YouTube", url: LINKS.youtube },
             ].map(({ icon: Icon, label, url }) => (
               <a
                 key={label}
