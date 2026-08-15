@@ -4,6 +4,9 @@ import { Instagram, MessageCircle, Send, Youtube, X, Play, ChevronLeft, ChevronR
 import classPhoto from "@/assets/class-photo.jpg.asset.json";
 import { Reveal } from "@/components/Reveal";
 import classBanner from "../assets/class-banner.jpeg";
+import classBanner2 from "../assets/class-banner-2.jpg";
+import classBanner3 from "../assets/class-banner-3.jpeg";
+import classBanner4 from "../assets/class-banner-4.jpeg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -28,19 +31,19 @@ const LINKS = {
   instagram: "https://instagram.com/cyberwalee",
 };
 
-// 🔧 Swap src with new asset URLs as you upload more photos
+// 🔧 Swap src with new asset URLs or imports as you upload more photos
 const PHOTOS = [
-  "Before viva 😬",
-  "After viva 💀",
-  "Lab legends 🧪",
-  "Proxy attendance squad 🤫",
-  "Canteen council meeting ☕",
-  "Last bench chronicles 📚",
-  "Submission night 🌙",
-  "Fest day energy 🔥",
-  "Group project ft. 1 person 😭",
-  "Sunset trip 🏔️",
-].map((caption, i) => ({ id: i, src: classPhoto.url, caption }));
+  { id: 0, src: classPhoto.url, caption: "Before viva 😬" },
+  { id: 1, src: classPhoto.url, caption: "After viva 💀" },
+  { id: 2, src: classPhoto.url, caption: "Lab legends 🧪" },
+  { id: 3, src: classPhoto.url, caption: "Proxy attendance squad 🤫" },
+  { id: 4, src: classPhoto.url, caption: "Canteen council meeting ☕" },
+  { id: 5, src: classPhoto.url, caption: "Last bench chronicles 📚" },
+  { id: 6, src: classPhoto.url, caption: "Submission night 🌙" },
+  { id: 7, src: classPhoto.url, caption: "Fest day energy 🔥" },
+  { id: 8, src: classPhoto.url, caption: "Group project ft. 1 person 😭" },
+  { id: 9, src: classPhoto.url, caption: "Sunset trip 🏔️" },
+];
 
 const REELS = [
   { title: "After Exam is Over", views: "12.4K views", url: "https://www.instagram.com/reel/Db5zthfNB_a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==&igsi=MzRlODBiNWFlZA==" },
