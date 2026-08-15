@@ -47,15 +47,15 @@ const LINKS = {
 // 🔧 Swap src with new asset URLs or imports as you upload more photos
 const PHOTOS = [
   { id: 0, src: classPhoto.url, caption: "Before viva 😬" },
-  { id: 1, src: classBanner2, caption: "After viva 💀" },
-  { id: 2, src: classBanner3, caption: "Lab legends 🧪" },
-  { id: 3, src: classBanner4, caption: "Proxy attendance squad 🤫" },
+  { id: 1, src: classBanner2, caption: "Lab Legends" },
+  { id: 2, src: classBanner3, caption: "Cyber" },
+  { id: 3, src: classBanner4, caption: "100% Fest Attendance" },
   { id: 4, src: classBanner5, caption: "Canteen council meeting ☕" },
-  { id: 5, src: classBanner6, caption: "Last bench chronicles 📚" },
+  { id: 5, src: classBanner6, caption: "Swimming in Pachira, Wai" },
   { id: 6, src: classPhoto.url, caption: "Submission night 🌙" },
   { id: 7, src: classPhoto.url, caption: "Fest day energy 🔥" },
   { id: 8, src: classPhoto.url, caption: "Group project ft. 1 person 😭" },
-  { id: 9, src: classBanner, caption: "Sunset trip 🏔️" },
+  { id: 9, src: classBanner, caption: "Niyogan!!" },
 ];
 
 const REELS = [
