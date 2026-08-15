@@ -9,6 +9,17 @@ import classBanner3 from "../assets/class-banner-3.jpeg";
 import classBanner4 from "../assets/class-banner-4.jpeg";
 import classBanner5 from "../assets/class-banner-5.jpeg";
 import classBanner6 from "../assets/class-banner-6.jpeg";
+
+
+const HERO_IMAGES = [
+  classBanner,
+  classBanner2,
+  classBanner3,
+  classBanner4,
+  classBanner5,
+  classBanner6,
+];
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
