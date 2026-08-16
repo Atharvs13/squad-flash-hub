@@ -66,10 +66,35 @@ const REELS = [
 ];
 
 const QUOTES = [
-  { text: "jyaa collage mdhe nit network nahiye tith placement kyy milanre", author: "— Cyberwalee Member" },
-  { text: "Degree Gheun kon moth nahi zaal Skills matters", author: "— Atharv Sutar" },
-  { text: "Paper mdhe kay lihl ahe tyapeksha kiti lihal ahe te important ahe ", author: "— Deva Rokade" },
+  {
+    text: "jyaa collage mdhe nit network nahiye tith placement kyy milanre",
+    author: "— Cyberwalee Member",
+  },
+  {
+    text: "Degree Gheun kon moth nahi zaal Skills matters",
+    author: "— Atharv Sutar",
+  },
+  {
+    text: "Paper mdhe kay lihl ahe tyapeksha kiti lihal ahe te important ahe",
+    author: "— Deva Rokade",
+  },
+  {
+    text: "Pass hoych asel tr copya gheun javaa",
+    author: "— Vishal Lohar",
+  },
+  {
+    text: "Attendance kami asli tari confidence kami nasla pahije.",
+    author: "— Cyberwalee Member",
+  },
+  {
+    text: "jya clg mdhe staff cyber cha nhiye tithun amhi hacking shiktoy",
+    author: "— Anushka Chikane",
+  },
 ];
+ 
+
+
+
 
 function Index() {
   const [lightbox, setLightbox] = useState<number | null>(null);
@@ -246,7 +271,7 @@ function Index() {
       {/* SOCIALS */}
       <section className="mx-auto max-w-4xl px-6 py-24 text-center">
         <Reveal>
-          <h2 className="text-3xl font-bold sm:text-4xl">Find the squad 🚀</h2>
+          <h2 className="text-3xl font-bold sm:text-4xl">Where is Cyberwalee 🚀</h2>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             {[
               { icon: Instagram, label: "Instagram", url: LINKS.instagram },
@@ -275,7 +300,7 @@ function Index() {
           {QUOTES.map((q, i) => (
             <Reveal key={q.text} delay={i * 120}>
               <blockquote
-                className="h-full rounded-3xl border border-foreground/10 bg-card p-6 transition-transform duration-300 hover:-translate-y-2"
+                className="h-full rounded-3xl border border-foreground/10 bg-card p-6  transition-transform duration-300 hover:-translate-y-2"
                 style={{ transform: `rotate(${i % 2 === 0 ? -1.5 : 1.5}deg)` }}
               >
                 <p className="text-lg font-semibold leading-snug">“{q.text}”</p>
@@ -286,26 +311,6 @@ function Index() {
         </div>
       </section>
 
-{/* 2nd MEMORY WALL */}
-
-       <section className="mx-auto max-w-6xl px-6 pb-24">
-        <Reveal>
-
-        </Reveal>
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {QUOTES.map((q, i) => (
-            <Reveal key={q.text} delay={i * 120}>
-              <blockquote
-                className="h-full rounded-3xl border border-foreground/10 bg-card p-6 transition-transform duration-300 hover:-translate-y-2"
-                style={{ transform: `rotate(${i % 2 === 0 ? -1.5 : 1.5}deg)` }}
-              >
-                <p className="text-lg font-semibold leading-snug">“{q.text}”</p>
-                <footer className="mt-4 text-sm text-accent">{q.author}</footer>
-              </blockquote>
-            </Reveal>
-          ))}
-        </div>
-      </section>
  
 {/* END OF MEMORY WALL */}
 
