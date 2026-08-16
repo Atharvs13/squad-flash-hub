@@ -1,15 +1,6 @@
 import { defineConfig as baseDefineConfig } from "@lovable.dev/vite-tanstack-config";
 
 const configFn = baseDefineConfig({
-  vite: {
-    server: {
-      hmr: {
-        host: "100.67.247.72",
-        port: 8082,
-      },
-    },
-  },
-
   tanstackStart: {
     server: { entry: "server" },
   },
@@ -18,17 +9,22 @@ const configFn = baseDefineConfig({
 export default async (env: any) => {
   const config = await configFn(env);
 
-  if (config.plugins) {
+  if (config.plugins) { 
     const removeDevtools = (plugins: any[]): any[] => {
       return plugins
         .map((p) => (Array.isArray(p) ? removeDevtools(p) : p))
         .filter((p) => {
           if (!p) return false;
           if (Array.isArray(p)) return p.length > 0;
+
           const name = p.name || "";
-          return !(typeof name === "string" && name.startsWith("@tanstack/devtools"));
+          return !(
+            typeof name === "string" &&
+            name.startsWith("@tanstack/devtools")
+          );
         });
     };
+
     config.plugins = removeDevtools(config.plugins);
   }
 
