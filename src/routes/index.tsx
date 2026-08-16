@@ -66,9 +66,9 @@ const REELS = [
 ];
 
 const QUOTES = [
-  { text: "Attendance is temporary, memories are forever.", author: "— every backbencher" },
-  { text: "One more assignment won't hurt… right?", author: "— famous last words" },
-  { text: "We came for the degree, stayed for the friends.", author: "— the whole squad" },
+  { text: "jyaa collage mdhe nit network nahiye tith placement kyy milanre", author: "— Cyberwalee Member" },
+  { text: "Degree Gheun kon moth nahi zaal Skills matters", author: "— Atharv Sutar" },
+  { text: "Paper mdhe kay lihl ahe tyapeksha kiti lihal ahe te important ahe ", author: "— Deva Rokade" },
 ];
 
 function Index() {
@@ -101,7 +101,7 @@ function Index() {
         <div className="absolute inset-0 bg-background/35" />
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
 
-        <span className="sticker absolute left-[6%] top-[18%] hidden rotate-[-8deg] rounded-full border border-accent/60 bg-card/70 px-4 py-2 text-sm font-semibold backdrop-blur sm:block">
+        <span className="sticker absolute left-[6%] top-[18%]  hidden rotate-[-8deg] rounded-full border border-accent/60 bg-card/70 px-4 py-2 text-sm font-semibold backdrop-blur sm:block">
           75% attendance? 😅
         </span>
         <span
@@ -113,18 +113,19 @@ function Index() {
 
         <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
           <Reveal>
-            <p className="mb-4 inline-block rounded-full border border-accent/50 bg-accent/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-              Est. first year · still surviving
-            </p>
+        <p className="mb-1 inline-flex items-center rounded-full border border-accent/60 bg-black/30 px-3 py-3 text-[11px] font-bold uppercase tracking-[0.28em] text-accent shadow-[0_0_20px_rgba(217,70,239,0.85)] backdrop-blur-md">
+  <span className="mr-2 h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_currentColor]" />
+  Est. First Year · Still Surviving
+</p>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="text-4xl font-extrabold leading-tight sm:text-6xl">
+            <h1 className="text- 4xl font-extrabold leading-tight sm:text-6xl">
               Welcome to Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">CYBERWALEE</span>
             </h1>
           </Reveal>
           <Reveal delay={200}>
             <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground sm:text-lg">
-              Assignments, memories, reels, chaos, and attendance struggles — all in one place.
+              Assignments, Bakchodi, memories, reels, chaos, and attendance struggles — all in one place.
             </p>
           </Reveal>
           <Reveal delay={300}>
@@ -139,7 +140,7 @@ function Index() {
                 href={LINKS.instagram}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="rounded-full border border-foreground/25 bg-card/60 px-7 py-3 text-sm font-semibold backdrop-blur transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:text-accent"
+                className="rounded-full border border-foreground/25 bg-card/60 px-7 py-3 text-sm font-semibold backdrop-blur shadow-[0_0_20px_rgba(217,70,239,0.85)] transition-all duration-200 hover:-translate-y-1 hover:border-accent hover:text-accent"
               >
                 Follow Our Instagram
               </a>
@@ -285,11 +286,39 @@ function Index() {
         </div>
       </section>
 
+{/* 2nd MEMORY WALL */}
+
+       <section className="mx-auto max-w-6xl px-6 pb-24">
+        <Reveal>
+
+        </Reveal>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {QUOTES.map((q, i) => (
+            <Reveal key={q.text} delay={i * 120}>
+              <blockquote
+                className="h-full rounded-3xl border border-foreground/10 bg-card p-6 transition-transform duration-300 hover:-translate-y-2"
+                style={{ transform: `rotate(${i % 2 === 0 ? -1.5 : 1.5}deg)` }}
+              >
+                <p className="text-lg font-semibold leading-snug">“{q.text}”</p>
+                <footer className="mt-4 text-sm text-accent">{q.author}</footer>
+              </blockquote>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+ 
+{/* END OF MEMORY WALL */}
+
+
       {/* FOOTER */}
       <footer className="border-t border-foreground/10 py-10 text-center text-sm text-muted-foreground">
-        <p>Made with caffeine, deadlines, and friendship. ☕</p>
-        <p className="mt-1">© 2026 Our College Class Page</p>
+        <p>Made with Bakchodi, F*ck Assignement, and friendship. 
+          
+        </p>
+        <p className="mt-1">© 2024 Our Cyberwalee</p>
       </footer>
+
+
 
       {/* LIGHTBOX */}
       {lightbox !== null && (
